@@ -4,7 +4,23 @@
 A team capstone project completed at James Madison University focused on designing and implementing a private cloud environment for hands-on Information Technology labs.
 
 The project explored how OpenStack and containerized infrastructure could be used to move networking and systems labs away from hardware-dependent environments and provide students with more flexible access to virtual infrastructure.
+## Infrastructure Architecture
 
+```mermaid
+flowchart TD
+    A["💻 Remote User"] --> B["🔐 VPN / Secure Access"]
+    B --> C["☁️ OpenStack Private Cloud"]
+
+    C --> D["🖥️ Virtual Machines"]
+    C --> E["🐳 Docker Containers"]
+    C --> F["🌐 Virtual Networks"]
+
+    F --> G["🔀 Routing"]
+    F --> H["🛡️ Security Groups"]
+
+    D --> I["🧪 Virtual Lab Environments"]
+    E --> I
+```
 ## Project Overview
 
 The project began with Docker-based lab environments and later expanded into an OpenStack private cloud deployment. The final environment was designed to support student experimentation with networks, instances, containers, security groups, users, projects, and cloud administration.
